@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ipplanmanager;
+
+/**
+ *
+ * @author MICHELLE
+ */
+public class Equipement {
+
+    private String nom;
+    private String type;
+    private InterfaceReseau interfacePrincipale;
+
+    public Equipement(String nom, String type, InterfaceReseau interfacePrincipale) {
+        setNom(nom);
+        setType(type);
+        this.interfacePrincipale = interfacePrincipale;
+    }
+
+    public void setNom(String nom) {
+        if (nom == null || nom.isEmpty()) {
+            this.nom = "equipement inconnu";
+        } else {
+            this.nom = nom;
+        }
+    }
+
+    public void setType(String type) {
+        if (type == null || type.isEmpty()) {
+            this.type = "Type inconnu";
+        } else {
+            this.type = type;
+        }
+    }
+
+    public void afficher() {
+        System.out.println("Nom : " + nom);
+        System.out.println("Type : " + type);
+        if (interfacePrincipale != null) {
+            interfacePrincipale.afficher();
+        } else {
+            System.out.println("Aucune interface configurée.");
+        }
+    }
+}
+
+
+   
