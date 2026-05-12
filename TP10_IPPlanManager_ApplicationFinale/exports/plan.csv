@@ -1,0 +1,3 @@
+Nom;Adresse;CIDR;Hotes;Capacite;Marge
+ETUDIANTS;10.10.0.0;23;500;510;10
+SERVEURS ;10.10.2.0;27;30;30;0
